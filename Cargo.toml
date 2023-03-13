@@ -1,0 +1,21 @@
+[package]
+name = "imbricate"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.maturin]
+name = "imbricate._internal"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "imbricate"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+arrow = "34.0.0"
+fake = {version="2.5.0", features=["derive","uuid"]}
+parquet = "34.0.0"
+pyo3 = "0.18.1"
+rand = "0.8.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.94"
