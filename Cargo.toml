@@ -12,6 +12,7 @@ name = "imbricate"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
+anyhow = "1.0.69"
 arrow = "34.0.0"
 fake = {version="2.5.0", features=["derive","uuid"]}
 parquet = "34.0.0"

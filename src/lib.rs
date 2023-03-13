@@ -1,8 +1,10 @@
+mod reader;
 mod sample;
 
 use fake::{Fake, Faker};
 
 use pyo3::prelude::*;
+use reader::read_parquet;
 use sample::*;
 
 #[pyfunction]
@@ -28,6 +30,7 @@ fn create_json(count: usize) {
 fn _internal(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(fake_order, m)?)?;
     m.add_function(wrap_pyfunction!(create_json, m)?)?;
+    m.add_function(wrap_pyfunction!(read_parquet, m)?)?;
 
     // let sample = PyModule::new(_py, "sample")?;
     // sample::init_module(sample)?;
