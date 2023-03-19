@@ -1,3 +1,4 @@
+"""Generate a JSON file with 300,000 objects, outputs to stdout."""
 from typing import Any, Dict
 import imbricate
 
